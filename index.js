@@ -110,6 +110,5 @@ function validate(e) {
 
 
 function delAll(){
-    localStorage.clear();
-    location.reload();
+    localStorage.clear(); for(let i=1;i<=flag;i++) { var stringbox="n"+i; document.getElementById(stringbox).style.display="none"; }
 }
