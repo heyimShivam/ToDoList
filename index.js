@@ -26,7 +26,11 @@ while(b<=flag){
 
 function toWrite(){
     let write=document.getElementById("toWrite");
-    let clone=elem.cloneNode(true);
+    if(write.value==""){
+        alert("Nothing to Add");
+    }
+    else{
+        let clone=elem.cloneNode(true);
    
     let boxes=document.getElementById("real").appendChild(clone);
     ++flag;
@@ -42,6 +46,7 @@ function toWrite(){
    localStorage.setItem("flag",flag);
   
     document.getElementById("toWrite").value="";
+    }
    
 }
 
